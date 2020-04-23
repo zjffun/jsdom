@@ -4,7 +4,7 @@
   "ws_doc_root": null,
   "server_host": null,
   "ports": {
-    "h2": [9000],
+    "h2": [9003],
     "http": [9002, "auto"],
     "https": [9443],
     "ws": [9001],
