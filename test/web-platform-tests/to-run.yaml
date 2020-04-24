@@ -872,7 +872,6 @@ template-element/template-content-hierarcy.html: [fail, "We do not implement htt
 DIR: html/semantics/selectors
 
 pseudo-classes/checked-type-change.html: [fail, CSS computed style computation]
-pseudo-classes/dir.html: [fail, "Fixed by https://github.com/web-platform-tests/wpt/pull/21588"]
 pseudo-classes/focus-autofocus.html: [timeout, Unknown]
 pseudo-classes/focus.html: [timeout, Unknown]
 pseudo-classes/indeterminate-radio.html: [fail, CSS computed style computation]
@@ -949,7 +948,8 @@ messageevent-constructor.https.html: [fail, uses MessageChannel]
 
 DIR: html/webappapis/system-state-and-capabilities/the-navigator-object
 
-navigator_user_agent.tentative.https.html: [fail, Not implemented]
+historical.https.window.html: [fail, Not implemented]
+navigator_user_agent.https.html: [fail, Not implemented]
 protocol.https.html: [fail, registerProtocolHandler() is not implemented]
 
 ---
@@ -974,6 +974,8 @@ Document-prototype-currentScript.html: [timeout, Test not up to date next with u
 DocumentOrShadowRoot-prototype-elementFromPoint.html: [fail, offsetTop not implemented]
 MouseEvent-prototype-offsetX-offsetY.html: [fail, offsetTop not implemented]
 ShadowRoot-interface.html: [fail, shadowRoot.styleSheet is not yet implemented]
+declarative/declarative-shadow-dom-basic.tentative.html: [fail, need nwsapi fix (browser also fail)]
+declarative/script-access.tentative.html: [fail, need nwsapi fix (browser also fail)]
 focus/click-focus-delegatesFocus-tabindex-varies.html: [fail, element.scrollIntoView is not implemented]
 focus/click-focus-delegatesFocus-tabindex-zero.html: [fail, element.scrollIntoView is not implemented]
 focus/focus-method-delegatesFocus.html: [fail, delegatesFocus is not implemented]
@@ -984,6 +986,7 @@ leaktests/html-collection.html: [fail, Document.all is not implemented]
 leaktests/window-frames.html: [fail, Window.name is not implemeneted]
 offsetParent-across-shadow-boundaries.html: [fail, offsetParent not implemented]
 scroll-to-the-fragment-in-shadow-tree.html: [fail, Requires a layout engine]
+slots-imperative-slot-api.tentative.html: [fail, (browser also fail)]
 untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-attributes/test-011.html: [fail, ShadowRoot.stylesheets is not implemented]
 untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-004.html: [fail, https://github.com/w3c/selection-api/issues/114]
 untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-006.html: [fail, DocumentOrShadowRoot.elementFromPoint() is not implemented. Needs layout engine]
@@ -1073,6 +1076,7 @@ access-control-sandboxed-iframe-denied-without-wildcard.htm: [fail, we don't imp
 access-control-sandboxed-iframe-denied.htm: [fail, we don't implement sandboxed iframes]
 anonymous-mode-unsupported.htm: [fail, need way to set cookie header with original casing]
 close-worker-with-xhr-in-progress.html: [fail, Needs Worker implementation]
+cors-expose-star.sub.any.html: [fail, Unknown]
 data-uri.htm: [fail, Unknown]
 event-error-order.sub.html: [fail, Unknown]
 event-timeout-order.any.html: [fail, Unknown]
@@ -1111,6 +1115,7 @@ send-blob-with-no-mime-type.html: [fail, Unknown]
 send-conditional-cors.htm: [timeout, Unknown]
 send-content-type-charset.htm: [fail-slow, bad test because not-yet-updated spec https://github.com/whatwg/xhr/issues/188]
 send-data-readablestream.any.html: [fail, ReadableStream not implemented]
+send-data-sharedarraybuffer.any.html: [fail, Unknown]
 send-entity-body-document.htm: [timeout, https://github.com/jsdom/jsdom/issues/1833]
 send-entity-body-empty.htm: [fail, hard to get Node to not send Content-Length]
 send-entity-body-get-head-async.htm: [fail, hard to get Node to not send Content-Length]
