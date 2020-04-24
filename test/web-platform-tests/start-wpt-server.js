@@ -52,6 +52,7 @@ module.exports = ({ toUpstream = false } = {}) => {
         ]).then(urls => ({ urls, subprocess })));
 
         process.on("exit", () => {
+          console.log("=====process exit");
           // Python doesn't register a default handler for SIGTERM and it doesn't run __exit__() methods of context
           // managers when it gets that signal. Using SIGINT avoids this problem.
           subprocess.kill("SIGINT");
