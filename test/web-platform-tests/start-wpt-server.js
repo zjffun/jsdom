@@ -41,8 +41,18 @@ module.exports = ({ toUpstream = false } = {}) => {
 
       return new Promise((resolve, reject) => {
         subprocess.on("error", e => {
+          console.log("=====error", e);
           reject(new Error("Error starting python server process:", e.message));
         });
+        subprocess.on("disconnect", () => {
+          console.log("=====disconnect");
+        })
+        subprocess.on("exit", d => {
+          console.log("=====exit", d);
+        })
+        subprocess.on("message", d => {
+          console.log("=====message:", d);
+        })
 
         resolve(Promise.all([
           pollForServer(`http://${config.browser_host}:${config.ports.http[0]}/`),

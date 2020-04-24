@@ -203,24 +203,5 @@ function createJSDOM(urlPrefix, testPath, expectFail) {
           });
         };
       });
-    }, err => {
-      console.log("=====error in JSDOM.fromURL", urlPrefix + testPath);
-      requestHead(urlPrefix + testPath, { strictSSL: false })
-        .then(() => {
-          console.log(`WPT server at ${url} is up!`);
-        })
-        .catch(err => {
-          console.log(`WPT server at ${url} is not up yet (${err.message})`);
-        });
-    })
-    .catch(err => {
-      console.log("=====error in JSDOM.fromURL then", urlPrefix + testPath);
-      requestHead(urlPrefix + testPath, { strictSSL: false })
-        .then(() => {
-          console.log(`WPT server at ${url} is up!`);
-        })
-        .catch(err => {
-          console.log(`WPT server at ${url} is not up yet (${err.message})`);
-        });
     });
 }
