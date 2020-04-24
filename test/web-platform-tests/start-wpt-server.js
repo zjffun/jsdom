@@ -6,6 +6,7 @@ const util = require("util");
 const childProcess = require("child_process");
 const requestHead = require("request-promise-native").head;
 const { inBrowserContext } = require("../util.js");
+const { getFetchCounts } = require("../../lib/api.js");
 
 const dnsLookup = util.promisify(dns.lookup);
 
@@ -48,6 +49,7 @@ module.exports = ({ toUpstream = false } = {}) => {
           console.log("=====disconnect");
         })
         subprocess.on("exit", d => {
+          console.log("+++++fetchCounts", getFetchCounts())
           console.log("=====exit", d);
         })
         subprocess.on("message", d => {
