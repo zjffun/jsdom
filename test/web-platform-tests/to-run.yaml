@@ -147,6 +147,7 @@ DIR: dom/collections
 
 DIR: dom/events
 
+Event-dispatch-detached-input-and-change.html: [fail, Unknown-temp]
 Event-dispatch-on-disabled-elements.html: [timeout, Uses testdriver.js]
 Event-dispatch-redispatch.html: [fail, Unknown]
 Event-isTrusted.any.html: [fail, Unknown]
@@ -191,6 +192,7 @@ Node-childNodes.html: [fail, Unknown]
 Node-isConnected.html: [fail, Last two tests with <iframe> are failing]
 ParentNode-querySelector-All-xht.xht: [fail, ::slotted() pseudo-class is not supported]
 ParentNode-querySelector-All.html: [fail, ::slotted() pseudo-class is not supported]
+ParentNode-replaceChildren.html: [fail, Unknown-temp]
 ProcessingInstruction-escapes-1.xhtml: [fail, Unknown]
 Text-constructor.html: [fail, Unknown]
 adoption.window.html: [fail, "We do not implement https://github.com/whatwg/dom/pull/754 due to https://github.com/whatwg/dom/issues/813"]
@@ -201,6 +203,7 @@ remove-and-adopt-thcrash.html: [fail, window.open not implemented]
 ---
 
 DIR: dom/ranges
+Range-insertNode.html: [fail, Unknown-temp]
 
 ---
 
@@ -215,6 +218,7 @@ DIR: domparsing
 DOMParser-parseFromString-html.html: [fail, needs to get "the active document's URL" which is not possible with one DOMParser shared across all windows]
 DOMParser-parseFromString-url-base-pushstate.html: [fail, iframe onload timing]
 DOMParser-parseFromString-url-base.html: [fail, iframe onload timing]
+DOMParser-parseFromString-url-moretests.html: [fail, Unknown-temp]
 DOMParser-parseFromString-url-pushstate.html: [fail, iframe onload timing]
 DOMParser-parseFromString-url.html: [fail, iframe onload timing]
 DOMParser-parseFromString-xml-doctype.html: [fail, saxes doesn't support DTD validation]
@@ -569,19 +573,48 @@ DIR: html/semantics/embedded-content/the-img-element
 Image-constructor.html: [fail-with-canvas, wrong-Realm Function, https://github.com/jsdom/jsdom/issues/2727]
 adoption.html: [timeout, Unknown]
 available-images-onload.html: [needs-canvas]
+below-viewport-image-loading-lazy-load-event.html: [timeout, Unknown-temp]
 current-pixel-density/**: [fail-with-canvas, Unimplemented]
+currentSrc-blob-cache.html: [fail, Unknown-temp]
 data-url.html: [needs-canvas]
 decode/**: [timeout, Unimplemented]
 delay-load-event-detached.html: [needs-canvas]
 delay-load-event.html: [timeout, Unknown]
+disconnected-image-loading-lazy.html: [fail, Unknown-temp]
 environment-changes/**: [timeout, Unimplemented]
 historical-progress-event.window.html: [needs-canvas]
+iframe-loading-lazy.html: [fail, Unknown-temp]
+image-loading-eager.html: [fail, Unknown-temp]
+image-loading-lazy-below-viewport-dynamic.html: [timeout, Unknown-temp]
+image-loading-lazy-crossorigin-change.sub.html: [fail, Unknown-temp]
+image-loading-lazy-in-cross-origin-iframe-001.sub.html: [fail, Unknown-temp]
+image-loading-lazy-in-cross-origin-iframe-002.sub.html: [fail, Unknown-temp]
+image-loading-lazy-in-script-disabled-iframe.html: [timeout, Unknown-temp]
+image-loading-lazy-in-viewport-dynamic.html: [timeout, Unknown-temp]
+image-loading-lazy-load-event.html: [timeout, Unknown-temp]
+image-loading-lazy-move-document.html: [fail, Unknown-temp]
+image-loading-lazy-move-into-script-disabled-iframe.html: [timeout, Unknown-temp]
+image-loading-lazy-multicol.html: [fail, Unknown-temp]
+image-loading-lazy-multiple-times.html: [fail, Unknown-temp]
+image-loading-lazy-srcset.html: [fail, Unknown-temp]
+image-loading-lazy.html: [timeout, Unknown-temp]
+image-parse-url-base.html: [timeout, Unknown-temp]
 img.complete.html: [timeout, Unknown]
 invalid-src.html: [timeout, Resource loader doesn't catch bad URLs at the right point in the process]
+invisible-image.html: [fail, Unknown-temp]
+move-element-and-scroll.html: [fail, Unknown-temp]
+natural-size-orientation.html: [timeout, Unknown-temp]
 nonexistent-image.html: [needs-canvas]
+not-rendered-below-viewport-image-loading-lazy.html: [fail, Unknown-temp]
 not-rendered-dimension-getter.html: [needs-canvas]
 null-image-source.html: [timeout, Unknown]
+original-base-url-applied-2.html: [fail, Unknown-temp]
+original-base-url-applied-iframe.html: [fail, Unknown-temp]
+original-base-url-applied.html: [fail, Unknown-temp]
+original-referrer-policy-applied.sub.html: [fail, Unknown-temp]
+picture-loading-lazy.html: [fail, Unknown-temp]
 relevant-mutations.html: [timeout, Unknown]
+remove-element-and-scroll.html: [timeout, Unknown-temp]
 sizes/**: [timeout, Unimplemented]
 srcset/**: [timeout, Unimplemented]
 update-media.html: [timeout, Unimplemented]
@@ -595,6 +628,8 @@ usemap-casing.html: [fail-with-canvas, Can't seem to handle onload = () => ...]
 DIR: html/semantics/forms/attributes-common-to-form-controls
 
 dirname-ltr.html: [timeout, Unknown]
+dirname-rtl-auto.html: [timeout, Unknown-temp]
+dirname-rtl-inherited.html: [timeout, Unknown-temp]
 formAction_document_address.html: [fail, Unknown]
 formaction.html: [fail, Unknown]
 
@@ -604,6 +639,7 @@ DIR: html/semantics/forms/constraints
 
 form-validation-validity-valueMissing.html: [fail, 'Spec unclear (see https://github.com/whatwg/html/issues/5202)']
 infinite_backtracking.html: [timeout, We cannot restrict duration of regex matching from JavaScript]
+radio-valueMissing.html: [fail, Unknown-temp]
 
 ---
 
@@ -666,8 +702,11 @@ DIR: html/semantics/forms/the-input-element
 
 checkbox.html: [fail, Events weirdness]
 datetime-local.html: [fail, min/max constraints not implemented]
+hidden-charset-case-sensitive.html: [timeout, Unknown-temp]
 image-click-form-data.html: [timeout, Unknown]
+input-seconds-leading-zeroes.html: [fail, Unknown-temp]
 input-type-button.html: [fail, Depends on offsetWidth]
+maxlength-number.html: [fail, Unknown-temp]
 maxlength.html: [fail, Reflection not implemented correctly]
 minlength.html: [fail, Reflection not implemented correctly]
 range-2.html: [fail, step attribute not yet implemented]
@@ -678,6 +717,8 @@ reset.html: [fail, Reset semantics not yet implemented]
 
 DIR: html/semantics/forms/the-label-element
 
+clicking-noninteractive-unlabelable-content.html: [fail, Unknown-temp]
+forward-focus-to-associated-element.html: [fail, Unknown-temp]
 label-attributes.sub.html: [fail, Unknown]
 
 ---
@@ -717,6 +758,7 @@ DIR: html/semantics/forms/the-textarea-element
 
 textarea-maxlength.html: [fail, Unknown]
 textarea-minlength.html: [fail, Unknown]
+wrap-enumerated-ascii-case-insensitive.html: [timeout, Unknown-temp]
 
 ---
 
@@ -731,6 +773,7 @@ toggleEvent.html: [fail, The ninth test requires a streaming HTML parser to pass
 ---
 
 DIR: html/semantics/interactive-elements/the-summary-element
+anchor-with-inline-element.html: [timeout, Unknown-temp]
 
 ---
 
@@ -812,6 +855,7 @@ execution-timing/106-defer-import.html: [fail, Unknown]
 execution-timing/106-external-import.html: [fail, Unknown]
 execution-timing/106-external-module-import.html: [fail, Unknown]
 execution-timing/106-external-module-noimport.html: [fail, Unknown]
+execution-timing/106-import-xhtml.xhtml: [fail, Unknown-temp]
 execution-timing/106-import.html: [fail, Unknown]
 execution-timing/106-module-import.html: [fail, Unknown]
 execution-timing/106-module-noimport.html: [fail, Unknown]
@@ -848,6 +892,8 @@ execution-timing/144.html: [fail, Unknown]
 execution-timing/145.html: [fail, Unknown]
 execution-timing/146.html: [fail, Unknown]
 execution-timing/149.html: [fail, Unknown]
+execution-timing/150-import-xhtml.xhtml: [fail, Unknown-temp]
+execution-timing/150-import.html: [fail, Unknown-temp]
 fetch-src/empty-with-base.html: [timeout, Unknown]
 fetch-src/empty.html: [timeout, Unknown]
 fetch-src/failure.html: [timeout, Unknown]
@@ -856,8 +902,35 @@ load-error-events-1.html: [timeout, Unknown]
 load-error-events-2.html: [timeout, Unknown]
 load-error-events-3.html: [timeout, Unknown]
 module/**: [timeout, Not implemented]
+moving-between-documents/after-prepare-createHTMLDocument-fetch-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/after-prepare-createHTMLDocument-parse-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/after-prepare-createHTMLDocument-success-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/after-prepare-iframe-fetch-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/after-prepare-iframe-parse-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/after-prepare-iframe-parse-error-inline-classic.html: [fail, Unknown-temp]
+moving-between-documents/after-prepare-iframe-success-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/after-prepare-iframe-success-inline-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-createHTMLDocument-fetch-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-createHTMLDocument-parse-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-createHTMLDocument-parse-error-inline-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-createHTMLDocument-success-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-createHTMLDocument-success-inline-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-iframe-fetch-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-iframe-parse-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-iframe-parse-error-inline-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-iframe-success-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/before-prepare-iframe-success-inline-classic.html: [fail, Unknown-temp]
+moving-between-documents/move-back-createHTMLDocument-fetch-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/move-back-createHTMLDocument-parse-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/move-back-createHTMLDocument-success-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/move-back-iframe-fetch-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/move-back-iframe-parse-error-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/move-back-iframe-parse-error-inline-classic.html: [fail, Unknown-temp]
+moving-between-documents/move-back-iframe-success-external-classic.html: [fail, Unknown-temp]
+moving-between-documents/move-back-iframe-success-inline-classic.html: [fail, Unknown-temp]
 muted-errors.sub.html: [fail, Muted errors not implemented]
 nomodule-**: [fail, Not implemented]
+script-crossorigin-network.sub.html: [fail, Unknown-temp]
 script-crossorigin.html: [fail, Unknown]
 script-for-event-xhtml.xhtml: [fail, Not implemented]
 script-for-event.html: [fail, Not implemented]
@@ -879,6 +952,7 @@ template-element/template-content-hierarcy.html: [fail, "We do not implement htt
 DIR: html/semantics/selectors
 
 pseudo-classes/checked-type-change.html: [fail, CSS computed style computation]
+pseudo-classes/dir-html-input-dynamic-text.html: [fail, Unknown-temp]
 pseudo-classes/dir.html: [fail, "Fixed by https://github.com/web-platform-tests/wpt/pull/21588"]
 pseudo-classes/focus-autofocus.html: [timeout, Unknown]
 pseudo-classes/focus.html: [timeout, Unknown]
@@ -956,6 +1030,7 @@ messageevent-constructor.https.html: [fail, uses MessageChannel]
 
 DIR: html/webappapis/system-state-and-capabilities/the-navigator-object
 
+historical.https.window.html: [fail, Unknown-temp]
 navigator_user_agent.https.html: [fail, Not implemented]
 protocol.https.html: [fail, registerProtocolHandler() is not implemented]
 
