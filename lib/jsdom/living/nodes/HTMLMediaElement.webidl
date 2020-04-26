@@ -11,7 +11,7 @@ interface HTMLMediaElement : HTMLElement {
   [CEReactions, ReflectURL] attribute USVString src;
 //  attribute MediaProvider? srcObject;
   readonly attribute USVString currentSrc;
-  [CEReactions, Reflect] attribute DOMString? crossOrigin;
+  [CEReactions] attribute DOMString? crossOrigin;
   const unsigned short NETWORK_EMPTY = 0;
   const unsigned short NETWORK_IDLE = 1;
   const unsigned short NETWORK_LOADING = 2;
