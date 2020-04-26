@@ -6,7 +6,7 @@ interface HTMLScriptElement : HTMLElement {
 //  [CEReactions, Reflect] attribute boolean noModule;
 //  [CEReactions] attribute boolean async;
   [CEReactions, Reflect] attribute boolean defer;
-  [CEReactions, Reflect] attribute DOMString? crossOrigin;
+  [CEReactions] attribute DOMString? crossOrigin;
   [CEReactions] attribute DOMString text;
 //  [CEReactions, Reflect] attribute DOMString integrity;
 

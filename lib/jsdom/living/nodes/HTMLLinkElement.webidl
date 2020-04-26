@@ -3,7 +3,7 @@
  HTMLConstructor]
 interface HTMLLinkElement : HTMLElement {
   [CEReactions, ReflectURL] attribute USVString href;
-  [CEReactions, Reflect] attribute DOMString? crossOrigin;
+  [CEReactions] attribute DOMString? crossOrigin;
   [CEReactions, Reflect] attribute DOMString rel;
 //  [CEReactions] attribute DOMString as; // (default "")
   [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;

@@ -7,7 +7,7 @@ interface HTMLImageElement : HTMLElement {
   [CEReactions, ReflectURL] attribute USVString src;
   [CEReactions, Reflect] attribute USVString srcset;
   [CEReactions, Reflect] attribute DOMString sizes;
-  [CEReactions, Reflect] attribute DOMString? crossOrigin;
+  [CEReactions] attribute DOMString? crossOrigin;
   [CEReactions, Reflect] attribute DOMString useMap;
   [CEReactions, Reflect] attribute boolean isMap;
   [CEReactions] attribute unsigned long width;
