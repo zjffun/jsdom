@@ -147,7 +147,6 @@ DIR: dom/collections
 
 DIR: dom/events
 
-Event-dispatch-detached-input-and-change.html: [fail, Unknown-temp]
 Event-dispatch-on-disabled-elements.html: [timeout, Uses testdriver.js]
 Event-dispatch-redispatch.html: [fail, Unknown]
 Event-isTrusted.any.html: [fail, Unknown]
