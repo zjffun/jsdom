@@ -191,7 +191,7 @@ Node-childNodes.html: [fail, Unknown]
 Node-isConnected.html: [fail, Last two tests with <iframe> are failing]
 ParentNode-querySelector-All-xht.xht: [fail, ::slotted() pseudo-class is not supported]
 ParentNode-querySelector-All.html: [fail, ::slotted() pseudo-class is not supported]
-ParentNode-replaceChildren.html: [fail, Unknown-temp]
+ParentNode-replaceChildren.html: [fail, Not implemented]
 ProcessingInstruction-escapes-1.xhtml: [fail, Unknown]
 Text-constructor.html: [fail, Unknown]
 adoption.window.html: [fail, "We do not implement https://github.com/whatwg/dom/pull/754 due to https://github.com/whatwg/dom/issues/813"]
@@ -202,7 +202,7 @@ remove-and-adopt-thcrash.html: [fail, window.open not implemented]
 ---
 
 DIR: dom/ranges
-Range-insertNode.html: [fail, Unknown-temp]
+Range-insertNode.html: [fail, Unknown]
 
 ---
 
@@ -217,7 +217,7 @@ DIR: domparsing
 DOMParser-parseFromString-html.html: [fail, needs to get "the active document's URL" which is not possible with one DOMParser shared across all windows]
 DOMParser-parseFromString-url-base-pushstate.html: [fail, iframe onload timing]
 DOMParser-parseFromString-url-base.html: [fail, iframe onload timing]
-DOMParser-parseFromString-url-moretests.html: [fail, Unknown-temp]
+DOMParser-parseFromString-url-moretests.html: [fail, Unknown]
 DOMParser-parseFromString-url-pushstate.html: [fail, iframe onload timing]
 DOMParser-parseFromString-url.html: [fail, iframe onload timing]
 DOMParser-parseFromString-xml-doctype.html: [fail, saxes doesn't support DTD validation]
@@ -572,9 +572,9 @@ DIR: html/semantics/embedded-content/the-img-element
 Image-constructor.html: [fail-with-canvas, wrong-Realm Function, https://github.com/jsdom/jsdom/issues/2727]
 adoption.html: [timeout, Unknown]
 available-images-onload.html: [needs-canvas]
-below-viewport-image-loading-lazy-load-event.html: [timeout, Unknown-temp]
+below-viewport-image-loading-lazy-load-event.html: [timeout, Unknown]
 current-pixel-density/**: [fail-with-canvas, Unimplemented]
-currentSrc-blob-cache.html: [fail, Unknown-temp]
+currentSrc-blob-cache.html: [fail, (needs-canvas) URL.createObjectURL not implemented]
 data-url.html: [needs-canvas]
 decode/**: [timeout, Unimplemented]
 delay-load-event-detached.html: [needs-canvas]
