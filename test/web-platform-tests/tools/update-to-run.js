@@ -27,9 +27,9 @@ mocha
   .run()
   .on("fail", (test, err) => {
     if (err.message.startsWith("Error: test harness should not timeout:")) {
-      reason = "[timeout, Unknown-test]";
+      reason = "[timeout, TempUnknown]";
     } else {
-      reason = "[fail, Unknown-test]";
+      reason = "[fail, TempUnknown]";
     }
     toRunObj[test.parent.title].push([test.title, reason]);
   })
@@ -64,7 +64,11 @@ async function updateToRun() {
         newToRunStrings.splice(-1, 0, `${test[0]}: ${test[1]}`);
         test = toRunFlatArr.shift();
       }
-    } else if (line === "" || line.startsWith(" ")) {
+    } else if (
+      line === "" ||
+      ["#", " "].some(c => line.startsWith(c)) ||
+      line.indexOf(":") === -1
+    ) {
       // do nothing
     } else if (test && !line.startsWith(test[0])) {
       while (test && !line.startsWith(test[0])) {
