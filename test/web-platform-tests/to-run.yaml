@@ -614,8 +614,8 @@ usemap-casing.html: [fail-with-canvas, Can't seem to handle onload = () => ...]
 DIR: html/semantics/forms/attributes-common-to-form-controls
 
 dirname-ltr.html: [timeout, Unknown]
-dirname-rtl-auto.html: [timeout, TempUnknown]
-dirname-rtl-inherited.html: [timeout, TempUnknown]
+dirname-rtl-auto.html: [timeout, Unknown]
+dirname-rtl-inherited.html: [timeout, Unknown]
 formAction_document_address.html: [fail, Unknown]
 formaction.html: [fail, Unknown]
 
@@ -688,11 +688,11 @@ DIR: html/semantics/forms/the-input-element
 
 checkbox.html: [fail, Events weirdness]
 datetime-local.html: [fail, min/max constraints not implemented]
-hidden-charset-case-sensitive.html: [timeout, TempUnknown]
+hidden-charset-case-sensitive.html: [timeout, Unknown]
 image-click-form-data.html: [timeout, Unknown]
-input-seconds-leading-zeroes.html: [fail, TempUnknown]
+input-seconds-leading-zeroes.html: [fail, Unknown]
 input-type-button.html: [fail, Depends on offsetWidth]
-maxlength-number.html: [fail, TempUnknown]
+maxlength-number.html: [fail, element.scrollIntoView is not a function]
 maxlength.html: [fail, Reflection not implemented correctly]
 minlength.html: [fail, Reflection not implemented correctly]
 range-2.html: [fail, step attribute not yet implemented]
@@ -704,7 +704,7 @@ reset.html: [fail, Reset semantics not yet implemented]
 DIR: html/semantics/forms/the-label-element
 
 clicking-noninteractive-unlabelable-content.html: [fail, TempUnknown]
-forward-focus-to-associated-element.html: [fail, TempUnknown]
+forward-focus-to-associated-element.html: [fail, focus label not implemented correctly]
 label-attributes.sub.html: [fail, Unknown]
 
 ---
