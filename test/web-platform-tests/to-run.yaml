@@ -702,7 +702,6 @@ reset.html: [fail, Reset semantics not yet implemented]
 
 DIR: html/semantics/forms/the-label-element
 
-clicking-noninteractive-unlabelable-content.html: [fail, TempUnknown]
 forward-focus-to-associated-element.html: [fail, focus label not implemented correctly]
 label-attributes.sub.html: [fail, Unknown]
 
